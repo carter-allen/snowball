@@ -1,0 +1,92 @@
+]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[mWelcome to fish, the friendly interactive shell
+[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                               ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [K]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[mcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Jecho "# snowball" >> README.md
+[30m(B[m[?2004l]0;echo  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Kgit init
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[mInitialized empty Git repository in /Users/carter/Documents/School/Summer_2019/Research/snowball/.git/
+[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Kgit add README.md
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Kgit commit -m "first commit"
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[master (root-commit) 4eee582] first commit
+ 1 file changed, 33 insertions(+)
+ create mode 100644 README.md
+[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [K
+git remote add origin https://github.com/carter-allen/snowball.git
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Kgit push -u origin master[25D[1mgit(B[m [36mpush[30m(B[m [36m-u[30m(B[m [36morigin[30m(B[m [36mmaster[30m(B[m
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[mCounting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 759 bytes | 759.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/carter-allen/snowball.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [K[7m^C[30m(B[m[K
+[Acarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [K
+[K[A[47C]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[mcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Kg[91mg[30m(B[m[38;5;240mit push -u origin master[24D[30m(B[m[91mi[38;5;240mt push -u origin master[23D[30m(B[m[91mt[38;5;240m push -u origin master[22D[30m(B[m[1mgit(B[m[38;5;240m push -u origin master[22D[30m(B[m[1m (B[m[38;5;240mpush -u origin master[21D[30m(B[m [38;5;240mpush -u origin master[21D[30m(B[ms[K[38;5;240mtatus[30m(B[m[36m[4ms[38;5;240m[24mtatus[30m(B[m[36m[4mt[38;5;240m[24matus[30m(B[m[36mst[38;5;240matus[30m(B[m[36matus[30m(B[m
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[mOn branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.Rproj.user/[m
+	[31m1305.5782.pdf[m
+	[31m1404.0431.pdf[m
+	[31mCommunity Algorithms Literature/[m
+	[31mGAIL notes Sept 5.docx[m
+	[31mHolland - 1983 - Stochastic blockmodels, first steps.pdf[m
+	[31mIMG_0239.JPG[m
+	[31mIMG_0240.JPG[m
+	[31mKEGG.RDATA[m
+	[31mNetwork Detection and Visualization in R.html[m
+	[31mNetwork Detection and Visualization in R_files/[m
+	[31mREADME.html[m
+	[31mSBM/[m
+	[31m_config.yml[m
+	[31ma19-schubert.pdf[m
+	[31mabbe_2017.pdf[m
+	[31mapproach2code.png[m
+	[31mbcd_2018.pdf[m
+	[31mbtr363 copy.pdf[m
+	[31mbtr363.pdf[m
+	[31mcarbon(1).png[m
+	[31mcarbon.png[m
+	[31mcollapsedSBM.2013-04-26.tar[m
+	[31mcos-hist-nocolor.pdf[m
+	[31mcos-hist.pdf[m
+	[31mcos-hist.tiff[m
+	[31mdists[m
+	[31mdists.rdata[m
+	[31mfig1.png[m
+	[31mfig2.png[m
+	[31mfig3.png[m
+	[31mfig4.png[m
+	[31mfig5.png[m
+	[31mfig6.png[m
+	[31mfig7.png[m
+	[31mgraph.png[m
+	[31mholland_1983.pdf[m
+	[31mjournal-club_040419.html[m
+	[31mjournal-club_041619.Rmd[m
+	[31mjournal-club_041619.html[m
+	[31mjournal-club_101618.Rmd[m
+	[31mjournal-club_101618.html[m
+	[31mjournal-club_101618.pdf[m
+	[31mjournal-club_120418.Rmd[m
+	[31mjournal-club_120418.html[m
+	[31mjournal-club_120418.pdf[m
+	[31mmcdaid_2012.pdf[m
+	[31mmcdaid_2013.pdf[m
+	[31mnetwork_distances.R[m
+	[31mnetwork_sim.R[m
+	[31mnowicki-snijders_2001.pdf[m
+	[31mp824-xu.pdf[m
+	[31mpathway_distances.csv[m
+	[31mpathway_distances_list.rdata[m
+	[31msnowball.Rproj[m
+	[31msnowball.png[m
+	[31mtest/[m
+	[31mtest_adj_mat.csv[m
+	[31mupdate_08-20.docx[m
+	[31mupdate_09-24.pptx[m
+	[31mupdate_9-10.pptx[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;fish  /Users/carter/Documents/School/Summer_2019/Research/snowball[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/S/R/snowball[30m(B[m> [Kg[91mg[30m(B[m[38;5;240mit status[9D[30m(B[m[91mi[38;5;240mt status[30m(B[m[91mt[38;5;240m status[30m(B[m[1mgit(B[m[38;5;240m status[30m(B[m[1m (B[m[38;5;240mstatus[30m(B[m [38;5;240mstatus[30m(B[ma[K[38;5;240mdd README.md[12D[30m(B[m[36m[4ma[38;5;240m[24mdd README.md[12D[30m(B[m[36m[4ms[30m(B[m[K[36mas[30m(B[m[K[36m[4ma[30m(B[m[36m[4md[30m(B[m[38;5;240md README.md[11D[30m(B[m[36mad[38;5;240md README.md[11D[30m(B[m[36md[38;5;240m README.md[10D[30m(B[m[36m [38;5;240mREADME.md[9D[30m(B[m [38;5;240mREADME.md[9D[30m(B[m-[K[38;5;240mA[30m(B[m[36m-[38;5;240mA[30m(B[m[36mA[30m(B[m
