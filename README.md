@@ -1,3 +1,13 @@
+# snowball
+
+## Single snowball
+
+[Simulation Study](snowball.R)
+
+## Multi snownall
+
+[Simulation Study](snowball.R)
+
 # Gene Network Augmentation Research
 
 ## Slides
@@ -29,5 +39,3 @@
 - [Clustering in Networks with the Collapsed Stochastic Block Model](Old Files/mcdaid_2012.pdf)
 - [Improved Bayesian inference for the stochastic block model with application to large networks](Old Files/mcdaid_2013.pdf)
 - [Estimation and Prediction for Stochastic Blockstructures](Old Files/nowicki-snijders_2001.pdf)
-
-# snowball
