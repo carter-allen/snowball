@@ -2,11 +2,11 @@
 
 ## Single snowball
 
-[Simulation Study](snowball.R)
+[Simulation Study](Code/snowball_simulation.R)
 
 ## Multi snownall
 
-[Simulation Study](snowball.R)
+[Simulation Study]()
 
 # Gene Network Augmentation Research
 
