@@ -41,7 +41,7 @@ gene_pairs %<>%
 ## Snowball Algorithm ##
 ########################
 
-n_iter = 1
+n_iter = 2
 critical_quantile = 0.90
 # Run the snowball algorithm on the core set
 network <- snowball(core_ids,
