@@ -6,7 +6,7 @@ library(tidyverse)
 library(magrittr)
 
 #####################
-## DATA GENERATION ##
+## Data Generation ##
 #####################
 
 n_core_genes <- 15 # number of genes in core network
@@ -16,7 +16,7 @@ n_cand_genes <- 10 # number of true candidate genes
 a <- 0.57 # alpha parameter for beta distribution of background cosine similarities
 b <- 5.92 # beta parameter for beta distribution of background cosine similarities
 # parameters for candidates beta distribution
-c <- 2*b # alpha parameter for beta distribution of candidate cosine similarities
+c <- 5*b # alpha parameter for beta distribution of candidate cosine similarities
 d <- b # beta parameter for beta distribution of candidate cosine similarities
 
 gene_ids <- 1:n_total_genes # generate the unique gene ids
@@ -36,7 +36,42 @@ gene_pairs %<>%
   mutate(gene1_is_core = ifelse(gene1 %in% core_ids, 1, 0),
          gene2_is_core = ifelse(gene2 %in% core_ids, 1, 0))
 
-network <- snowball(core_ids,gene_pairs)
+
+########################
+## Snowball Algorithm ##
+########################
+
+n_iter = 1
+critical_quantile = 0.90
+# Run the snowball algorithm on the core set
+network <- snowball(core_ids,
+                    gene_pairs,
+                    n.iter = n_iter,
+                    crit.quantile = critical_quantile,
+                    verbose = T)
+
+# save the genes that were added to the network
+added_genes <- network$candidates
+# save the true candidate genes that were added to the network
+true_cands <- intersect(added_genes,cand_ids)
+# compute true postitive rate
+true_pos <- length(true_cands)/length(added_genes)
+# save the false candidate genes that were added to the network
+false_cands <- setdiff(added_genes,cand_ids)
+# compute the false positive rate
+false_pos <- length(false_cands)/length(added_genes)
+
+
+# Summarize results
+cat("------------------- \n")
+cat("Snowball Simulation \n")
+cat("------------------- \n")
+cat(paste("Total gene pool size:",n_total_genes,"\n"))
+cat(paste("Core network size:",n_core_genes,"\n"))
+cat(paste("Critical percentile:",critical_quantile,"\n"))
+cat(paste("Number of true candidates:",n_cand_genes,"\n"))
+cat(paste("Number of added candidates:",length(added_genes),"\n"))
+cat(paste("Number of true candidates added:",length(true_cands),"\n"))
 
 
 
