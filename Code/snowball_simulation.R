@@ -26,8 +26,7 @@ cand_ids <- sort(sample(setdiff(gene_ids,core_ids),n_cand_genes,replace = FALSE)
 gene_pairs <- t(combn(gene_ids,2)) # all unique gene-gene pairs 
 colnames(gene_pairs) <- c("gene1","gene2") # name columns appropriately
 gene_pairs <- as.data.frame(gene_pairs) # convert matrix to data frame
-n_combn <- choose(n_total_genes,2) # save the totla number of unique combinations
-
+n_combn <- choose(n_total_genes,2) # save the total number of unique combinations
 gene_pairs$cos <- rbeta(n_combn,a,b) # sample background similarity scores
 gene_pairs[union(core_ids,cand_ids),]$cos <- rbeta(n_core_genes + n_cand_genes,c,d) # sample core & cand. similarity scores
 
@@ -41,13 +40,14 @@ gene_pairs %<>%
 ## Snowball Algorithm ##
 ########################
 
-n_iter = 2
+n_iter = 5
 critical_quantile = 0.90
 # Run the snowball algorithm on the core set
 network <- snowball(core_ids,
                     gene_pairs,
-                    n.iter = n_iter,
-                    crit.quantile = critical_quantile,
+                    n.iter = 100,
+                    crit.quantile = 0.80,
+                    min_avg_sim_perc = 0.99,
                     verbose = T)
 
 # save the genes that were added to the network
@@ -72,8 +72,6 @@ cat(paste("Critical percentile:",critical_quantile,"\n"))
 cat(paste("Number of true candidates:",n_cand_genes,"\n"))
 cat(paste("Number of added candidates:",length(added_genes),"\n"))
 cat(paste("Number of true candidates added:",length(true_cands),"\n"))
-
-
 
 
 

@@ -1,3 +1,6 @@
+library(tidygraph)
+library(igraph)
+library(ggraph)
 plot.snowball <- function(ball)
 {
   ball_mat = ball$sim_mat
@@ -6,8 +9,8 @@ plot.snowball <- function(ball)
                                           mode = "undirected",
                                           weighted = TRUE,
                                           diag = FALSE)
-  g = as_tbl_graph(g) %>%
-    mutate(is_core = ifelse(name %in% core_ids,1,0),
+  g = tidygraph::as_tbl_graph(g) %>%
+    dplyr::mutate(is_core = ifelse(name %in% core_ids,1,0),
            label = factor(is_core,
                            levels = c(0,1),
                            labels = c("Cand.",
