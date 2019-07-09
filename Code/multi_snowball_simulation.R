@@ -1,7 +1,9 @@
 #############################
 ### Multi-core Simulation ###
 #############################
+library(parallel)
 
+# define settings
 n_genes <- 1000
 n_cores <- 4
 n_total_core_genes <- 200
@@ -14,3 +16,4 @@ for(l in 1:n_cores)
   core_id_list[[l]] <- sample(gene_ids,n_core_l,replace = FALSE) 
 }
 
+multi_ball <- multi_snowball(core_id_list,snowball,cos_sims = gene_pairs)
